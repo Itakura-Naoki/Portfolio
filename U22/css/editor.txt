@@ -1,0 +1,27 @@
+.CodeMirror-gutters {
+  //エディタ左側、背景
+  background-color: #ffa3dd;
+}
+.CodeMirror-linenumber {
+  //数字・背景
+  color: #ffdab9;
+  background-color: #f8f8f8;
+}
+.CodeMirror {
+  //エディタ内部
+  height: 400px !important;
+  background-color: rgb(92, 86, 86);
+  color: #ffffff;
+}
+.CodeMirror-cursor {
+  //挿入時のカーソル
+  border-left: 2px solid #fff;
+}
+/* 選択モードのカーソル /
+  .CodeMirror-focused .CodeMirror-selected .CodeMirror-cursor {
+    border-left: 2px solid red;
+  }
+  / 選択モードの選択範囲 */
+.CodeMirror-focused .CodeMirror-selected {
+  background: rgba(255, 0, 0, 0.2);
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/fabicon.png" />
+    <title>Java Interpreter</title>
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    <!-- 以下追記 -->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script type="text/javascript" src="./js/lib/turn.js"></script>
+    <script src="./js/new.js" defer></script>
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/intro.js/minified/introjs.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.62.3/lib/codemirror.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- <script type="text/javascript" src="http://www.google.com/jsapi"></script> -->
+    <link rel="stylesheet" href="./css/polaroid.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <img src="./img/school4x.png" alt="logo" />
+        <div class="title">
+          <h1>HEW<br /><san>212-03</san></h1>
+        </div>
+        <nav id="navi">
+          <div id="tutorial">
+            <i class="fa-solid fa-circle-question"></i>使い方
+          </div>
+          <div id="modalBtn2"><i class="fa-solid fa-book"></i>図形の説明</div>
+          <div id="modalBtn">
+            <i class="fa-solid fa-list-check"></i>使用技術
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- <p>使用した技術</p> -->
+        <div class="use_img">
+          <div class="polaroid">
+            <img src="./img/turnjs-logo.png" alt="turn.js" />
+            <p>turn.js</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/tweenjs-logo.png" alt="tween.js" />
+            <p>tween.js</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/createjs-logo.png" alt="create.js" />
+            <p>create.js</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/typed-js.png" alt="typed.js" />
+            <p>リアルタイム入力演出</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/introjs-logo.png" alt="intro.js" />
+            <p>チュートリアル</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/codemirror-logo.png" alt="codemirror.js" />
+            <p>エディタ作成</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/jquery-logo.png" alt="jquery" />
+            <p>jsをシンプルに</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/php-logo.png" alt="php" />
+            <p>バックエンド処理</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/sass-logo.png" alt="sass" />
+            <p>構造が素晴らしいcss</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/css-logo.png" alt="css" />
+            <p>レイアウト</p>
+          </div>
+          <div class="polaroid">
+            <img src="./img/html-logo.png" alt="html" />
+            <p>サイトの枠組み</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal2" class="modal2">
+      <div class="modal-content2">
+        <span class="close2">&times;</span>
+        <div class="art">
+          <h2>図形の説明</h2>
+          <table>
+            <tr>
+              <th>画像</th>
+              <th><img src="./img/display13.png" alt="String" /></th>
+              <th><img src="./img/Circle_(transparent).png" alt="int" /></th>
+              <th>
+                <img
+                  src="./img/cm2kPviybwQymou1678080917_1678081010.png"
+                  alt="double"
+                />
+              </th>
+            </tr>
+            <tr>
+              <th>型</th>
+              <td>String</td>
+              <td>int</td>
+              <td>double</td>
+            </tr>
+            <tr>
+              <th>説明</th>
+              <td>文字列が<br />入ります</td>
+              <td>整数が<br />入ります</td>
+              <td>小数が<br />入ります</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="wrap">
+      <div id="all">
+        <div id="left">
+          <h2>コードを入力</h2>
+          <form id="myForm">
+            <div id="form-area">
+              <textarea name="myTextarea" id="codeArea"></textarea>
+              <div class="type-wrap"><span id="typing"></span></div>
+            </div>
+            <div class="align">
+              <a id="reset" class="btn_01"
+                ><i class="fa-solid fa-trash-can"></i>リセット</a
+              >
+              <button type="button" class="button" id="send">
+                <i class="fa-solid fa-play"></i>
+                実行する
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="right">
+          <h2>アニメーション</h2>
+          <div id="flipbook"></div>
+          <div class="page_change">
+            <ul class="arrow">
+              <li>
+                <span id="prevpage"
+                  ><i class="fa-solid fa-angle-left size"></i>戻る</span
+                >
+              </li>
+              <li>
+                <span id="nextpage"
+                  >次へ<i class="fa-solid fa-angle-right size"></i
+                ></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_wrap">
+        <p class="copyright">© 2023-03 HAL Event Week. IH212-03</p>
+      </div>
+    </footer>
+  </body>
+  <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./js/codemirror.js"></script>
+  <script src="./js/my_codemirror.js"></script>
+  <script src="./js/intro-setting.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/clear.js"></script>
+  <script src="./js/polaroid.js"></script>
+  <script src="./js/flash.js"></script>
+  <script src="./js/typing.js"></script>
+</html>

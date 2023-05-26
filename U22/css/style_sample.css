@@ -1,0 +1,59 @@
+@charset "utf-8";
+body{
+    width: 960px;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: rgb(236, 255, 255);
+    font-family: 'Noto Serif JP', serif;
+    /* font-family: 'Shippori Mincho', serif; */
+    /* font-family: 'Zen Kaku Gothic New', sans-serif; */
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    margin-top: 3%;
+}
+#wrap h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+#all{
+    width: 100%;
+    height: 90%;
+    /* margin-top: 1%; */
+    display: flex;
+    justify-content: space-around;
+    /* background-color: red; */
+}
+#left{
+    width: 45%;
+    height: 100%;
+}
+#left h2{
+    text-align: center;
+}
+#left form{
+    width: 100%;
+    height: 70%;
+}
+#left form textarea{
+    width: 100%;
+    height: 80%;
+    line-break: anywhere;
+}
+#left form .button{
+    margin: 0 40%;
+    /* background-color: rgb(1, 136, 255); */
+    border-radius: 10%;
+}
+#codeArea{
+    font-size: large;
+    background-color: black;
+}
+#right{
+    width: 45%;
+    height: 70%;
+}
+
+/* 背景色の変更 */
+.cm-highlight { background-color: yellow; }

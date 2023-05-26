@@ -1,0 +1,394 @@
+@charset "UTF-8";
+body {
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  /* モーダル */
+}
+body header {
+  width: 100%;
+  height: 15vh;
+  min-height: 110px;
+  background-color: #ffd4af;
+}
+body header .head {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .head img {
+  width: 160px;
+  height: auto;
+  margin-right: 190px;
+}
+body header .head .title {
+  text-align: center;
+}
+body header .head .title h1 {
+  font-family: "Caveat", cursive;
+  font-size: 33px;
+  line-height: 30px;
+}
+body header .head .title h1 span {
+  font-size: 40px;
+}
+body header .head #navi {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .head #navi div {
+  filter: drop-shadow(2px 5px 7px rgba(87, 87, 87, 0.3137254902));
+  cursor: pointer;
+  margin-left: 5px;
+  background-color: white;
+  padding: 10px 13px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  background: linear-gradient(to top, #ff9f7f, #ffb18f);
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body header .head #navi div:hover {
+  color: #fff;
+  opacity: 0.5;
+}
+body header .head #navi div i {
+  margin: 0 4px 0 0;
+}
+body .modal {
+  display: none; /* 初期状態では非表示 */
+  position: fixed; /* 画面内での位置を固定 */
+  z-index: 1; /* モーダルを最前面に表示 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* スクロール可能にするためにオーバーフローを設定 */
+  background-color: rgba(0, 0, 0, 0.5); /* モーダル外側の背景色 */
+  /* モーダルの内容 */
+}
+body .modal .modal-content {
+  width: 90%; /* 幅は90%までとする */
+  max-width: 800px; /* 最大幅を800ピクセルにする */
+  height: 70%; /* 高さは60%までとする */
+  max-height: 600px; /* 最大高さを600ピクセルにする */
+  background-color: #fefefe;
+  margin: 15% auto; /* 画面の中央に配置 */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  /* 閉じるボタン */
+}
+body .modal .modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+body .modal .modal-content .close:hover, body .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .modal2 {
+  display: none; /* 初期状態では非表示 */
+  position: fixed; /* 画面内での位置を固定 */
+  z-index: 1; /* モーダルを最前面に表示 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* スクロール可能にするためにオーバーフローを設定 */
+  background-color: rgba(0, 0, 0, 0.5); /* モーダル外側の背景色 */
+  /* モーダルの内容 */
+}
+body .modal2 .modal-content2 {
+  width: 90%; /* 幅は90%までとする */
+  max-width: 550px; /* 最大幅を800ピクセルにする */
+  height: 70%; /* 高さは60%までとする */
+  max-height: 350px; /* 最大高さを600ピクセルにする */
+  background-color: #fefefe;
+  margin: 15% auto; /* 画面の中央に配置 */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  /* 閉じるボタン */
+}
+body .modal2 .modal-content2 .close2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+body .modal2 .modal-content2 .close2:hover, body .modal2 .modal-content2 .close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .modal2 .modal-content2 .art {
+  margin: 30px 0 0 30px;
+}
+body .modal2 .modal-content2 .art h2 {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-size: large;
+}
+body .modal2 .modal-content2 .art table {
+  margin-right: 40px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 3px solid #666;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+body .modal2 .modal-content2 .art table tr th {
+  width: 120px;
+  border: 3px rgb(135, 135, 135) solid;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+body .modal2 .modal-content2 .art table tr th:first-of-type {
+  background: #b2ffd8;
+}
+body .modal2 .modal-content2 .art table tr th:nth-of-type(1) {
+  background: #d1ffd1;
+}
+body .modal2 .modal-content2 .art table tr th:nth-of-type(2) {
+  background: #e8ffd1;
+}
+body .modal2 .modal-content2 .art table tr th:nth-of-type(3) {
+  background: #ffffd1;
+}
+body .modal2 .modal-content2 .art table tr th:nth-of-type(4) {
+  background: #ffe8d1;
+}
+body .modal2 .modal-content2 .art table tr th img {
+  width: 100%;
+  height: auto;
+}
+body .modal2 .modal-content2 .art table tr td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 3px rgb(135, 135, 135) solid;
+}
+body .modal2 .modal-content2 .art table tr td:first-of-type {
+  background: #b2ffd8;
+}
+body .modal2 .modal-content2 .art table tr td:nth-of-type(1) {
+  background: #e8ffd1;
+  font-weight: 450;
+}
+body .modal2 .modal-content2 .art table tr td:nth-of-type(2) {
+  background: #ffffd1;
+  font-weight: 450;
+}
+body .modal2 .modal-content2 .art table tr td:nth-of-type(3) {
+  background: #ffe8d1;
+  font-weight: 450;
+}
+body .modal2 .modal-content2 .art table tr td:nth-of-type(4) {
+  background: #ffe8d1;
+}
+body #wrap {
+  width: 100%;
+  background-color: #ffe8cc;
+  margin: 0 auto;
+}
+body #wrap #all {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body #wrap #all #left {
+  width: 45%;
+  height: 100%;
+}
+body #wrap #all #left h2 {
+  background-color: #9a9a9a;
+  margin: 15px 0px 0px 0px;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+body #wrap #all #left #myForm {
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+  /* 選択モードのカーソル /
+    .CodeMirror-focused .CodeMirror-selected .CodeMirror-cursor {
+      border-left: 2px solid red;
+    }
+    / 選択モードの選択範囲 */
+}
+body #wrap #all #left #myForm #form-area {
+  position: relative;
+}
+body #wrap #all #left #myForm #form-area .type-wrap {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.686);
+  left: 34px;
+  top: 4px;
+}
+body #wrap #all #left #myForm .CodeMirror-gutters {
+  background-color: rgb(197, 197, 197);
+}
+body #wrap #all #left #myForm .CodeMirror-linenumber {
+  color: #8b8b8b;
+}
+body #wrap #all #left #myForm .CodeMirror {
+  height: 350px !important;
+  background-color: rgb(38, 36, 36);
+  color: #ffffff;
+}
+body #wrap #all #left #myForm .CodeMirror-cursor {
+  border-left: 2px solid #fff;
+}
+body #wrap #all #left #myForm .CodeMirror-focused .CodeMirror-selected {
+  background: rgba(0, 149, 248, 0.431);
+}
+body #wrap #all #left #myForm .align {
+  text-align: center;
+  background-color: #666666;
+  border-radius: 0px 0px 10px 10px;
+}
+body #wrap #all #left #myForm .align #reset {
+  position: relative;
+  z-index: 1000;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 5%; /* 角丸       */
+  font-size: 15px; /* 文字サイズ */
+  text-align: center; /* 文字位置   */
+  cursor: pointer; /* カーソル   */
+  padding: 13px 32px; /* 余白       */
+  background: #000066; /* 背景色     */
+  color: #ffffff; /* 文字色     */
+  line-height: 1em; /* 1行の高さ  */
+  transition: 0.3s; /* なめらか変化 */
+  box-shadow: 7px 7px 3px #666666; /* 影の設定 */
+  border: 2px solid #000066; /* 枠の指定 */
+}
+body #wrap #all #left #myForm .align #reset:hover {
+  box-shadow: none; /* カーソル時の影消去 */
+  color: #000066; /* 背景色     */
+  background: #ffffff; /* 文字色     */
+}
+body #wrap #all #left #myForm .align #send {
+  position: relative;
+  z-index: 1000;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 5%; /* 角丸       */
+  font-size: 15px; /* 文字サイズ */
+  text-align: center; /* 文字位置   */
+  cursor: pointer; /* カーソル   */
+  padding: 13px 32px; /* 余白       */
+  background: #00de94; /* 背景色     */
+  color: #ffffff; /* 文字色     */
+  line-height: 1em; /* 1行の高さ  */
+  transition: 0.3s; /* なめらか変化 */
+  box-shadow: 7px 7px 3px #666666; /* 影の設定 */
+  border: 2px solid #00de94; /* 枠の指定 */
+}
+body #wrap #all #left #myForm .align #send:hover {
+  box-shadow: none; /* カーソル時の影消去 */
+  color: #00de94; /* 背景色     */
+  background: #ffffff; /* 文字色     */
+}
+body #wrap #all #right {
+  width: 600px;
+  height: 100%;
+}
+body #wrap #all #right h2 {
+  background-color: #ffc5e2;
+  margin: 15px 0px 0px 0px;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+body #wrap #all #right #flipbook {
+  width: 100%;
+  height: 68%;
+  background-color: #fff;
+}
+body #wrap #all #right .page_change {
+  width: 100%;
+  height: auto;
+  background-color: #ffc5e2;
+  border-radius: 0 0 10px 10px;
+}
+body #wrap #all #right .page_change .arrow {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px 10px;
+}
+body #wrap #all #right .page_change .arrow li {
+  text-align: center;
+  border: solid black 1px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s;
+  padding: 0 7px 0;
+}
+body #wrap #all #right .page_change .arrow li:hover {
+  background-color: rgb(255, 90, 90);
+  color: #fff;
+  transition: 0.3s;
+}
+body #wrap #all #right .page_change .arrow li #prevpage {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px 5px;
+}
+body #wrap #all #right .page_change .arrow li #prevpage .size {
+  text-align: center;
+  padding-right: 15px;
+  height: auto;
+  font-size: 35px;
+  border-radius: 10px;
+}
+body #wrap #all #right .page_change .arrow li #nextpage {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px 5px;
+}
+body #wrap #all #right .page_change .arrow li #nextpage .size {
+  text-align: center;
+  padding-left: 15px;
+  height: auto;
+  font-size: 35px;
+  border-radius: 10px;
+}
+body .footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #d0d0d0;
+}
+body .footer .footer_wrap {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
